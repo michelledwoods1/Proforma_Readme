@@ -38,7 +38,7 @@ During the completion of this task, I learned:
 #
 Screenshot of deployed application
 #
-![Screenshot of deployed application](./Develop/assets/images/screenshot.png)
+![Screenshot of deployed application](./assets/screenshot.PNG);
 
 #
 Link to video walk through of application

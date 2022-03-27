@@ -104,11 +104,15 @@ function generateMarkdown(data) {
   #
   [Click here to see deployed application](${data.website})
 
-  #Below is a screenshot of the deployed application
-  
-  ![](assets/images/screenshot.png)
-  `
+  #
+  Below is a screenshot of the deployed application
+
+   #
+  ![Screenshot of deployed application](./Develop/images/${data.screenshot});
+ `
 };
+
+
 
 module.exports = {
   renderLicenseBadge,

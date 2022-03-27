@@ -1,10 +1,10 @@
 
-  # Proforma README
+  # c
 
   # ![!License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
   ## Description
-  An application to dynamically create a professional README.md file using the same format for each and every project.
+  d
   
   ## Table of Contents
   - [Installation](#installation)
@@ -23,12 +23,12 @@
   ## Installation
   To install the necessary dependencies, run the following command:
 
-      npm i
+      e
 
   
   ## Usage
     
-      Your responses to the pre-poluted questions will be used to dynamically create your High-Quality README file, allowing you more time to work on your project!
+      e
 
 
   ## License
@@ -38,7 +38,7 @@
   ## Contributing
   To contribute, please:
 
-      Make a pull request
+      f
 
   ## Tests
   To run tests, run the following command:
@@ -46,12 +46,14 @@
       npm tests
   
   ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at email@fakeEmail.com.  You can find more of my work at (https://github.com/michelledwoods1).
+  If you have any questions about the repo, open an issue or contact me directly at b.  You can find more of my work at (https://github.com/a).
   
   #
-  [Click here to see deployed application](https://www.npmjs.com/)
+  [Click here to see deployed application]()
 
-  #Below is a screenshot of the deployed application
-  
-  ![](assets/images/screenshot.png)
-  
+  #
+  Below is a screenshot of the deployed application
+
+   #
+  ![Screenshot of deployed application](./images/screenshot.PNG);
+ 

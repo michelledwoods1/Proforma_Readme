@@ -69,7 +69,8 @@ inquirer
       type: "input",
       name: "screenshot",
       message:
-        "Please add your screenshot to the 'assets/images/' folder and provide the filename (incl file extension):",
+        "Please add your screenshot to the './images/' folder and provide the filename (incl file extension):",
+        
     },
   ])
   .then(data => {
