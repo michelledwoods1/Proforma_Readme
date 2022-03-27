@@ -54,12 +54,11 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
-  #
-  ${renderLicenseBadge(data.license)}
-  
+  # ${renderLicenseBadge(data.license)}
+
   ## Description
   ${data.description}
-
+  
   ## Table of Contents
   - [Installation](#installation)
 
@@ -73,38 +72,41 @@ function generateMarkdown(data) {
   
   - [Questions](#questions)
 
+  
   ## Installation
   To install the necessary dependencies, run the following command:
 
       ${data.installing}
 
-  ## Usage
-  To install, please run:
   
+  ## Usage
+    
       ${data.using}
 
+
   ## License
-  This project is licensed under ${data.license}.  [Click here to view license]${renderLicenseLink(data.license)}
+  This project is licensed under ${data.license}.
+  [Click here to view]${renderLicenseLink(data.license)}
 
   ## Contributing
   To contribute, please:
 
       ${data.contributing}
-  
+
   ## Tests
   To run tests, run the following command:
 
       ${data.testing}
   
   ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at ${data.email}.  [You can find more of my work at](https://github.com/${data.github}).
+  If you have any questions about the repo, open an issue or contact me directly at ${data.email}.  You can find more of my work at (https://github.com/${data.github}).
   
   #
-  [Click here to view ${data.title} application Website](${data.website})
+  [Click here to see deployed application](${data.website})
 
-  #
-  ![Screenshot of ${data.title} deployed application](assets/images/${data.screenshot})
-  ;
+  #Below is a screenshot of the deployed application
+  
+  ![](assets/images/screenshot.png)
   `
 };
 

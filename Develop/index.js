@@ -78,3 +78,22 @@ inquirer
    fs.writeFile("README.md", markdownPageContent, (err) =>
      err ? console.log(err) : console.log("Sucessfully created README.nd")
   )});
+   
+//answers
+
+//    michelledwoods1
+
+//    email@fakeEmail.com
+
+//    Proforma README
+
+//    An application to dynamically create a professional README.md file using the same format for each and every project.
+
+//    Your responses to the pre-poluted questions will be used to dynamically create your High-Quality README file, allowing you more time to work on your project!
+
+//    Make a pull request
+
+//    https://www.npmjs.com/
+
+
+//    screenshot.png
