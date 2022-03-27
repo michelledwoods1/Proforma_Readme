@@ -54,16 +54,8 @@ inquirer
       message: 'What does the user need to know about contributing to the repo?',
     },
   ])
-  // .then((data) => {
-  //   const markdownPageContent = generateMarkdown(data);
-  //  // TODO: Create a function to write README file
-  
-  //   fs.writeFile('README.md', markdownPageContent, (err) =>
-  //   err ? console.log(err) : console.log('Sucessfully created README.nd')
-  //   );
-  // });
   .then((data) =>
-    console.log (`# ${data.title}
+    console.log(`# ${data.title}
     ## Description
     ${data.description}
     ## Table of Contents
@@ -79,4 +71,12 @@ inquirer
     ${data.tests}
     ### Questions
     ${data.email}
-  `));
+  `)
+  .then((data) => {
+    const markdownPageContent = generateMarkdown(data);
+   // TODO: Create a function to write README file
+  
+    fs.writeFile('README.md', markdownPageContent, (err) =>
+    err ? console.log(err) : console.log('Sucessfully created README.nd'))
+  }));
+  
