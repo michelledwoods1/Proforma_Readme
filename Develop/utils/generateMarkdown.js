@@ -1,96 +1,112 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-//     switch (license) {
-//       case 'Apache 2.0':
-//         ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg);
-//         break;
-//       case 'Boost 1.0':
-//         ![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)
-//         break;
-//       case 'BSD 3.0':
-//         ![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)
-//         break;
-//       case 'BSD 2.0':
-//         ![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)
-//         break;
-//       default:
-//         return (" ");
-    };
+  switch (license) {
+    case 'Apache 2.0':
+      return '![!License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)'
+      break;
+    case 'Boost 1.0':
+      return '![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)'
+      break;
+    case 'BSD 3.0':
+      return '![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)'
+      break;
+    case 'BSD 2.0':
+      return '![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)'
+      break;
+    default:
+      return " ";
+  };
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-//   switch (license) {
-//     case 'Apache 2.0':
-//       ![License](https://opensource.org/licenses/Apache-2.0);
-//       break;
-//     case 'Boost 1.0':
-//       ![License](https://www.boost.org/LICENSE_1_0.txt);
-//       break;
-//     case 'BSD 3.0':
-//       ![License](https://opensource.org/licenses/BSD-3-Clause);
-//       break;
-//     case 'BSD 2.0':
-//       ![License](https://opensource.org/licenses/BSD-2-Clause);
-//       break;
-//     default:
-//       return (" ")
+  switch (license) {
+    case 'Apache 2.0':
+      return '(https://opensource.org/licenses/Apache-2.0)';
+      break;
+    case 'Boost 1.0':
+      return '(https://www.boost.org/LICENSE_1_0.txt)';
+      break;
+    case 'BSD 3.0':
+      return '(https://opensource.org/licenses/BSD-3-Clause)';
+      break;
+    case 'BSD 2.0':
+      return '(https://opensource.org/licenses/BSD-2-Clause)';
+      break;
+    default:
+      return " ";
   };
+};  
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-
-}
+  if (license === "None") {
+    return " ";
+  } else {
+    return '- [License](#license)';
+}};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}
+
+  #
+  ${renderLicenseBadge(data.license)}
   
   ## Description
   ${data.description}
 
   ## Table of Contents
-  -[Installation](#installation)
+  - [Installation](#installation)
 
-  -[Usage](#usage)
+  - [Usage](#usage)
   
-  -[License](#license)
+  ${renderLicenseSection(data.license)}
   
-  -[Contributing](#contributing)
+  - [Contributing](#contributing)
   
-  -[Test](#tests)
+  - [Test](#tests)
   
-  -[Questions](##questions)
+  - [Questions](#questions)
 
   ## Installation
   To install the necessary dependencies, run the following command:
-  ${data.installing}
+
+      ${data.installing}
 
   ## Usage
-  To install, please run: ${data.using}
+  To install, please run:
+  
+      ${data.using}
+
+  ## License
+  This project is licensed under ${data.license}.  [Click here to view license]${renderLicenseLink(data.license)}
 
   ## Contributing
   To contribute, please:
-    ${data.contributing}
+
+      ${data.contributing}
   
   ## Tests
   To run tests, run the following command:
-    ${data.testing}
+
+      ${data.testing}
   
   ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at ${data.email}.  You can find more of my work at ${data.github}.
+  If you have any questions about the repo, open an issue or contact me directly at ${data.email}.  [You can find more of my work at](https://github.com/${data.github}).
   
-  ## License
-  This project is licensed under the ${data.license}
-#
-[Click here to view ${data.title} Website](${data.website})
-#
-![Screenshot of ${data.title} url](assets/images/${data.screenshot})
-;
-`}
+  #
+  [Click here to view ${data.title} application Website](${data.website})
+
+  #
+  ![Screenshot of ${data.title} deployed application](assets/images/${data.screenshot})
+  ;
+  `
+};
 
 module.exports = {
   renderLicenseBadge,
@@ -98,4 +114,3 @@ module.exports = {
   renderLicenseSection,
   generateMarkdown,
 };
-  
